@@ -1,0 +1,125 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; 
+    color: #333; 
+}
+
+/* Center and limit the width of the main element */
+main {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+/* Style for header */
+header {
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        background-color: #23395d;
+        color: white;
+}
+
+header img {
+    width: 150px; 
+    height: auto; 
+    margin-right: 15px; 
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+/* Navigation styles */
+nav {
+    background-color: black; 
+    padding: 10px; 
+}
+
+nav ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+nav li {
+    margin: 10px 0; 
+}
+
+nav a {
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: 700; 
+    display: block; 
+    padding: 10px; 
+}
+
+/* Main content sections styled as cards */
+.card {
+    background-color: #f0f0f0; 
+    border-radius: 8px; 
+    padding: 0; 
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.card ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 10px; 
+}
+
+.card p {
+    text-align: center;
+}
+
+.card h3 {
+    background-color: #23395d; 
+    color: white; 
+    padding: 10px; 
+    margin: 0; 
+    text-align: center; 
+    border-radius: 8px 8px 0 0; 
+}
+
+main {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 20px;
+}
+
+main h2 {
+    background-color: #f4f4f4; 
+    padding: 10px 0; 
+    text-align: center; 
+    position: relative; 
+    margin: 20px 0; 
+}
+
+main h2::after {
+    content: ""; 
+    display: block; 
+    width: 80%; 
+    height: 2px; 
+    background-color: #000; 
+    margin: 10px auto 0; 
+}
+
+/* Footer styles */
+footer {
+    text-align: center; 
+    margin-top: 20px; 
+    padding: 10px 0; 
+    background-color: #23395d;
+    color: #fff; 
+}
+
+/* Additional styling adjustments as needed */
