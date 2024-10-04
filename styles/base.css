@@ -46,20 +46,60 @@ nav ul {
     padding: 0; 
     margin: 0; 
     display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: row;
+    justify-content: center;
 }
 
 nav li {
-    margin: 10px 0; 
+    margin: 0; /* Add horizontal margin */
 }
 
 nav a {
     color: #fff; 
     text-decoration: none; 
     font-weight: 700; 
-    display: block; 
+    display: inline-block; /* Change from block to inline-block */
     padding: 10px; 
+}
+
+/* Menu styles */
+.menu {
+    display: none; /* Hide the menu button by default */
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Show the menu button on mobile devices */
+@media only screen and (max-width: 768px) {
+    .menu {
+        display: block; 
+    }
+    nav ul {
+        display: none; 
+        text-align: center;
+    }
+    nav ul.show {
+        display: block; 
+        text-align: center;
+    }
+    nav li a {
+        display: inline-block; 
+        margin: 0 10px; 
+        vertical-align: top;
+    }
+}
+
+/* Add a pseudo-element to the menu button to display an 'X' when the menu is open */
+.menu::before {
+    content: "☰";
+}
+
+.menu.open::before {
+    content: "X";
 }
 
 /* Main content sections styled as cards */
@@ -125,7 +165,20 @@ footer {
 /* Additional styling adjustments as needed */
 
 iframe {
-    width: 100%; /* Full width for responsive design */
-    height: 300px; /* Adjust height as necessary */
-    border: none; /* Remove border for cleaner look */
+    width: 100%; 
+    height: 300px; 
+    border: none; 
+}
+
+/* Highlight the list item text when hovering over it */
+nav ul li {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out; 
+}
+
+nav ul li:hover {
+    background-color: #ffd700; 
+}
+
+nav ul li:hover a {
+    color: #000; 
 }
