@@ -1,160 +1,197 @@
-/* Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Caveat&family=Indie+Flower&family=Nanum+Brush+Script&family=Permanent+Marker&family=Righteous&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-size: 22px;
+    background-color: #eadeda;
+    font-family: Permanent Marker, Righteous, Bruno Ace Marker;
     margin: 0;
     padding: 0;
-    color: #fff;
-    background-color: #ffffff; /* White */
 }
 
-h1, h2, h3 {
-    color: #0056b3; /* Blue */
+header {
+    background-color: #23395d;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 150px auto;
 }
 
-a {
+header h1 {
+    color: #eadeda;
+    text-align: center;
+}
+
+.navigation {
+    display: grid;
+    background-color: black;
+    padding: 20px 0; /* Add padding to the top and bottom of the navigation bar */
+}
+
+.navigation ul {
+    list-style-type: none; /* Remove bullets */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Align list items horizontally */
+    justify-content: space-around; /* Space out the items */
+}
+
+.navigation li {
+    margin: 0 20px; /* Add horizontal spacing between list items */
+}
+
+nav a {
+    text-align: center;
+    color: white;
     text-decoration: none;
-    color: #ffa500; /* Bright Orange */
+    padding: 20px 40px; /* Maintain vertical padding */
+    font-size: 30px;
 }
 
-a:hover {
-    color: #ffd700; /* Yellow */
+nav a:hover {
+    color: #1C1D21;
+    border-radius: 15px;
 }
 
-/* Header */
-header.nav {
-    background-color: #0056b3; /* Blue */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+.slideshow-container {
+    width: 100%;
+    margin: auto;
+    background-color: #eadeda;
+    position: relative;
 }
 
-.nav-brand h1 {
-    font-size: 1.8rem;
-    color: #ffffff; /* White */
+.mySlides {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
 }
 
-.nav-box ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+.mySlides.fade {
+    animation: fadeAnimation 5s infinite;
 }
 
-.nav-box ul li a {
-    color: #ffffff; /* White */
-    padding: 10px 15px;
-    border-radius: 5px;
+@keyframes fadeAnimation {
+    0%, 100% { opacity: 0; }
+    20%, 80% { opacity: 1; }
 }
 
-.nav-box ul li a.active-page, 
-.nav-box ul li a:hover {
-    background-color: #ffa500; /* Bright Orange */
-    color: #0056b3; /* Blue */
+#hero-msg {
+    position: absolute;
+    top: 100px;
+    left: 50%; /* Center the hero message */
+    transform: translateX(-50%); /* Center the element */
+    background-color: rgba(35, 57, 93, 0.5);; /* Semi-transparent background */
+    padding: 20px; /* Add padding inside the message */
+    border-radius: 10px; /* Rounded corners */
+    color: black; /* Text color */
+    text-align: center; /* Center the text */
 }
 
-/* Hero Section */
-.hero {
-    background-color: #0056b3; /* Blue */
-    padding: 50px;
+.button-box a {
+    background-color: rgba(0, 163, 41, 0.8); /* Semi-transparent button background */
+    color: #1C1D21; /* Text color */
+    text-decoration: none;
+    font-family: Permanent Marker, Righteous, Bruno Ace Marker;
+    font-size: 20px;
+    padding: 15px 30px;
+    margin-top: 20px; /* Space above the button */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#hero img {
+    width: 100%;
+}
+
+.card-img {
+    border: 10px solid #d9c2a3;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
+    height: 500px;
+    width: 500px;
+}
+
+.card-img:hover {
+    opacity: .6;
+    transform: scale(1.1);
+}
+
+.chamber-card h2 {
     text-align: center;
 }
 
-.hero h2 {
-    font-size: 2.5rem;
-    color: #ffffff; /* White */
-}
-
-.hero p {
-    font-size: 1.2rem;
-    color: #ffffff; /* White */
-}
-
-.hero .btn {
-    padding: 10px 20px;
-    background-color: #ffa500; /* Bright Orange */
-    color: #0056b3; /* Blue */
-    border-radius: 5px;
-}
-
-.hero .btn:hover {
-    background-color: #ffd700; /* Yellow */
-}
-
-/* Event Section */
-.event-card-container {
+.home-grid {
     display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    margin: 20px;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.event-card {
-    background-color: #0056b3; /* Blue */
-    padding: 20px;
-    border-radius: 8px;
-    flex: 1;
-}
-
-.event-card h3 {
-    font-size: 1.5rem;
-    color: #ffffff; /* White */
-}
-
-.event-card p {
-    color: #ffffff; /* White */
-}
-
-/* Banner */
-#banner {
-    background-color: #ffd700; /* Yellow */
-    color: #0056b3; /* Blue */
-    text-align: center;
-    padding: 10px;
-}
-
-#banner button {
-    background-color: #ffa500; /* Bright Orange */
-    color: #0056b3; /* Blue */
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-/* Footer */
 footer {
-    background-color: #0056b3; /* Blue */
-    color: #ffffff; /* White */
-    padding: 30px;
+    background-color: #23395d;
+    color: white;
+    padding: 25px 50px;
+    margin-top: 200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
-.footer-title h2 {
-    color: #ffffff; /* White */
+footer p {
+    color: white;
+    font-size: 1.2em;
+    padding: 2%;
 }
 
-.footer-addr, .footer-nav, .legal {
-    margin: 10px;
+footer p a {
+    text-decoration: none;
+    color: white;
 }
 
-.footer-addr h3, .footer-nav h3 {
-    color: #ffa500; /* Bright Orange */
+footer p a:hover {
+    color: #1C1D21;
 }
 
-.footer-nav ul {
-    list-style: none;
+footer .social img {
+    padding-top: 15px;
 }
 
-.footer-nav ul li a {
-    color: #ffffff; /* White */
+#current-events {
+    /* Remove background color and padding */
+    margin: 20px 0; /* Space above and below the section */
 }
 
-.footer-nav ul li a:hover {
-    color: #ffd700; /* Yellow */
+/* Heading style for current events */
+#current-events h2 {
+    text-align: center; /* Center the heading */
+    font-size: 28px; /* Font size */
+    color: black; /* Dark blue color */
+    margin-bottom: 20px; /* Space below the heading */
 }
 
-.legal span {
-    font-size: 0.8rem;
-    color: #ffffff; /* White */
+/* Style for the card container */
+.card-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space out the cards */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+}
+
+/* Style for individual cards */
+.card {
+    background-color: white; /* Semi-transparent card background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Space inside the card */
+    margin: 10px; /* Space around the card */
+    width: 300px; /* Fixed width for cards */
+    text-align: center; /* Center the text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Animation on hover */
+}
+
+/* Hover effect for cards */
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+/* Style for card text */
+.card p {
+    font-size: 18px; /* Font size for paragraph */
+    color: #1C1D21; /* Dark text color */
 }

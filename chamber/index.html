@@ -2,124 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce</title>
     <meta name="description" content="Caloocan Chamber of Commerce">
     <meta name="author" content="Alfonso Tumbokon">
+    <title>Caloocan City Chamber of Commerce</title>
+    
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="chamber/styles/medium.css">
-    <link rel="stylesheet" href="chamber/styles/larger.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-    <header class="nav">
-        <div class="nav-brand">
-            <img src="" alt="Caloocan City Chamber of Commerce" width="60" height="60" />
-            <h1 id="nav-title">Caloocan City Chamber of Commerce</h1>
-        </div>
-        <div class="nav-box">
-            <div class="nav-info">
-                <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-                <nav class="nav-links">
-                    <ul>
-                        <li><a href="" class="active-page">Home</a></li>
-                        <li><a href="">Discover</a></li>
-                        <li><a href="">Resources</a></li>
-                        <li><a href="">Join</a></li>
-                    </ul>
-                </nav>
-                <label for="nav-toggle" class="nav-btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
+    <div id="content">
+        <header>
+            <h1>Caloocan City Chamber of Commerce</h1>
+        </header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+        <div id="hero" class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="/chamber/images/Cal1.jpg" alt="slideshow">
             </div>
-
-            <div class="dark-mode-btn">
-                <input type="checkbox" id="darkOption" class="checkbox" onclick="screenMode()" />
-                <label for="darkOption" class="toggle">
-                    <span class="slider"></span>
-                </label>
+            <div class="mySlides fade">
+                <img src="/chamber/images/Cal2.jpg" alt="slideshow">
             </div>
-        </div>
-    </header>
-    <!-- Content -->
-    <main>
-        <section class="hero hero-home">
-            <div class="container">
-                <div class="hero-content">
-                    <h2>Caloocan City Chamber of Commerce</h2>
-                    <p>Fostering a thriving community within the great city of caloocan.</p>
-                    <a href="" class="btn">Join Us</a>
-                </div>
+            <div class="mySlides fade">
+                <img src="/chamber/images/Cal3.png" alt="slideshow">
             </div>
-        </section>
-        <div id="banner" class="" role="alert">
-            <p>Join us for the Chamber of Commerce meet and greet on Thursday at 2:00 p.m.!</p>
-            <button type="button" id="closeBanner" aria-label="Close">x</button>
-        </div>
-        <div class="info">
-            <section class="style5">
-                <h2>Up Coming Events</h2>
-                <div class="event-card-container">
-                    <div class="event-card">
-                        <h3>Events</h3>
-                        <div>When and Where</div>
-                        <p>Descriptions</p>
-                    </div>
-                    <div class="event-card">
-                        <h3>Events</h3>
-                        <div>When and Where</div>
-                        <p>Descriptions</p>
-                    </div>
-                    <div class="event-card">
-                        <h3>Events</h3>
-                        <div>When and Where</div>
-                        <p>Descriptions</p>
-                    </div>
+            <section id="hero-msg">
+                <h1 class="home-title">Become part of the thriving community.</h1>
+                <div class="button-box">
+                    <a class="join" href="">Join Us!</a>
                 </div>
             </section>
         </div>
-
-        <div class="spotlights">
-            <div class="cards"></div>
-        </div>
-    </main>
-    <!-- Footer  -->
-    <footer>
-        <section class="footer">
-            <div class="footer-title">
-                <img src="images/logos/vwcc-logo.webp" alt="West Valley Chamber of Commerce" width="60" height="60" />
-                <h2>Caloocan City Chamber of Commerce</h2>
-            </div>
-            <div class="footer-addr">
-                <h3>Contact</h3>
-                <address>
-                    Address<br />
-                    Address<br />
-                    <a class="footer-btn" href="">Email Us</a>
-                </address>
-            </div>
-            <div class="footer-nav">
-                <h3>Links</h3>
-                <ul class="">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Discover</a></li>
-                    <li><a href="">Resources</a></li>
-                    <li><a href="">Join</a></li>
-                </ul>
-            </div>
-
-            <div class="legal">
-                <div class="">
-                    <span><span id="cYear">&copy;</span> Caloocan City Chamber of Commerce | Alfonso Tumbokon</span>
+        <main>
+            <section id="current-events">
+                <h2>Current Events</h2>
+                <div class="card-container">
+                    <div class="card"><p>None</p></div>
+                    <div class="card"><p>None</p></div>
+                    <div class="card"><p>None</p></div>
                 </div>
-                <div class="">
-                    <span id="lastModified"></span>
-                </div>
+            </section>
+            <div class="home-grid">
+                <section class="chamber-card">
+                    <h2>Discover</h2>
+                    <img class="card-img" src="/chamber/images/Discover.jpg" alt="Discover">
+                </section>
+                <section class="chamber-card">
+                    <h2>Resources</h2>
+                    <img class="card-img" src="/chamber/images/resources.jpg" alt="Resources">
+                </section>
             </div>
-        </section>
-    </footer>
+        </main>
+        <footer>
+            <p>&copy;<span id="currentYear"></span> Alfonso<span id="lastModified"></span></p>
+            <p><a href="/index.html">Main</a></p>
+            <p><a href="/lesson03/chamber-site-plan.html">Site Plan</a></p>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank"><img src="/chamber/images/facebook.png" alt="Facebook icon"></a>
+                <a href="https://twitter.com" target="_blank"><img src="/chamber/images/twitter.png" alt="Twitter icon"></a>
+                <a href="https://instagram.com" target="_blank"><img src="/chamber/images/instagram.png" alt="Instagram icon"></a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+            var slides = document.getElementsByClassName("mySlides");
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";  
+            setTimeout(showSlides, 10000); // Change image every 10 seconds
+        }
+    </script>
 </body>
 </html>
