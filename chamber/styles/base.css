@@ -195,3 +195,56 @@ footer .social img {
     font-size: 18px; /* Font size for paragraph */
     color: #1C1D21; /* Dark text color */
 }
+
+.menu {
+    display: none; /* Hide the menu button by default */
+    background-color: black; /* Background color for the button */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px; /* Padding around button */
+    font-size: 24px; /* Font size for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Show the menu button on mobile devices */
+@media only screen and (max-width: 768px) {
+    .menu {
+        display: block; 
+    }
+
+    nav ul {
+        display: none; /* Hide the menu by default */
+        text-align: center; /* Center align the menu items */
+        padding: 0; /* Remove padding */
+    }
+
+    nav ul.show {
+        display: block; /* Show the menu when the 'show' class is added */
+        text-align: center; /* Center align the menu items */
+    }
+
+    nav li {
+        list-style: none; /* Remove bullet points */
+    }
+
+    nav li a {
+        display: block; /* Display links as blocks for easy clicking */
+        margin: 0 10px; /* Margin around the links */
+        padding: 10px; /* Padding for the links */
+        color: white; /* Link color */
+        text-decoration: none; /* Remove underline */
+    }
+
+    nav li a:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Optional: hover effect */
+    }
+}
+
+/* Add a pseudo-element to the menu button to display a hamburger icon */
+.menu::before {
+    content: "☰"; /* Hamburger icon */
+}
+
+.menu.open::before {
+    content: "X"; /* Change to "X" when the menu is open */
+}
